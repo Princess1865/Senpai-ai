@@ -15,8 +15,9 @@ async function getAIResponse(userMessage) {
         "Sup! What do you want?",
         "That's a W question!",
         "-1000 aura question",
-        "Who do you want to rizz with this question?",
+        "Who do you seek to rizz with this question?",
         "let me ask my brain...",
+        "next question!",
         "I'm here to assist you!",
         
     ];
