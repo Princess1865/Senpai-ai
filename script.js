@@ -1,7 +1,3 @@
-// Add this at the top of script.js
-const API_KEY = 'your-api-key-here'; // Replace with your actual OpenAI API key
-const API_URL = 'https://api.openai.com/v1/chat/completions';
-
 // Function to add a message to the chat
 function addMessage(message, isUser) {
     const chatMessages = document.getElementById('chatMessages');
@@ -12,7 +8,7 @@ function addMessage(message, isUser) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Function to get AI response (simplified)
+// Function to get AI response
 async function getAIResponse(userMessage) {
     try {
         const response = await fetch('http://localhost:3000/api/chat', {
@@ -31,7 +27,7 @@ async function getAIResponse(userMessage) {
         return data.response;
     } catch (error) {
         console.error('Error:', error);
-        return "Sorry, I encountered an error. Please try again later.";
+        return "wait!.";
     }
 }
 
@@ -61,7 +57,7 @@ async function sendMessage() {
         addMessage(aiResponse, false);
     } catch (error) {
         loadingDiv.remove();
-        addMessage("Sorry, I encountered an error. Please try again later.", false);
+        addMessage("I said wait!.", false);
     }
 }
 
